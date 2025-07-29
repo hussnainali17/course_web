@@ -53,7 +53,7 @@ const Contact = () => {
         <p className="text-blue-800 mb-8 text-lg">
           You can contact us 24/7 through any of the following platforms.
         </p>
-        <div className="flex justify-center items-center gap-8 flex-wrap">
+        <div className="flex justify-center items-center gap-5 md:gap-8 flex-wrap">
           {contacts.map((c, i) => (
             <a
               key={c.name}

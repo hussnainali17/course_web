@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '../components/Layout';
 import { gsap } from 'gsap';
 import Social from '../components/Social';
+import Bars from '../components/Bars';
 import FloatingContact from '../components/FloatingContact';
 import { FaBookOpen, FaMobileAlt, FaGlobe, FaBolt, FaUserMd, FaSyncAlt } from 'react-icons/fa';
 
@@ -40,32 +41,43 @@ const Home = () => {
     return (
         <Layout>
             {/* Hero Section */}
-            <section className="bg-blue-50 py-16 px-4 text-center">
-                <h1
-                    ref={heroRef}
-                    className="text-4xl md:text-5xl font-bold text-blue-900 mb-4"
-                >
-                    THE USMLE HORIZON
-                </h1>
-                <p
-                    ref={paraRef}
-                    className="max-w-2xl mx-auto text-lg md:text-xl text-blue-800 mb-8"
-                >
-                    <span className="font-semibold text-blue-900">
-                        A highly trusted platform
-                    </span>{' '}
-                    which is serving the medical students since half a decade, who are aspiring for International Exams i.g.{' '}
-                    <span className="font-semibold text-blue-900">
-                        (USMLE, PLAB, AMC, MCCQE, etc)
-                    </span>{' '}
-                    their Required Resources and Providing Research opportunities in Internationally renowned journals such as{' '}
-                    <span className="font-semibold text-blue-900">
-                        PubMed, WOS, Fortune, Google Scholars, Scopus, Nature, etc.
-                    </span>
-                    <br /><br />
-                    Our Moto is <span className="italic font-bold text-blue-900">"We serve from Scratch to Match"</span>
-                </p>
-            </section>
+            <section className="bg-[#0d3570] min-h-[70vh] flex flex-col md:flex-row items-center justify-between px-4 md:px-16 py-12 relative overflow-hidden">
+  {/* Left: Logo and Text */}
+  <div className="flex-1 flex flex-col items-center text-center md:items-start md:text-left z-10">
+    {/* Logo */}
+    <img
+      src="https://i.postimg.cc/Vkc3Wg5Q/99.webp"
+      alt="iMD Medical Resources Logo"
+      className="w-24 h-24 mb-4 mx-auto md:mx-0"
+    />
+    {/* Heading */}
+    <h1
+      ref={heroRef}
+      className="text-4xl sm:text-4xl md:text-4xl font-bold text-white mb-4 leading-tight w-full text-left"
+    >
+      Your Ultimate <br className='md:hidden' /> Medical Life <br />
+      Companion &amp;<br className='md:hidden' /> Learning Hub
+    </h1>
+    {/* Description */}
+    <p
+      ref={paraRef}
+      className="text-white text-base sm:text-lg md:text-lg text-left mb-6 max-w-xl"
+    >
+      The only Biggest Medical Resources' hub on Earth with more than <span className="font-bold">45,000 Medical and Pharmaceutical Resources &amp; Databases</span> now available globally to our valued subscribers.
+    </p>
+  </div>
+  {/* Right: Image with Shape */}
+  <div className="flex-1 flex items-center justify-center relative mt-10 md:mt-0">
+    {/* Decorative Shape */}
+    <div className="absolute w-60 h-60 sm:w-72 sm:h-72 md:w-[420px] md:h-[420px] bg-[#d6f5e6] rounded-[40%] -z-10 right-0 md:right-8 top-1/2 -translate-y-1/2"></div>
+    {/* Main Image */}
+    <img
+      src="https://i.postimg.cc/sf6YJNNb/med.webp"
+      alt="Medical Professional"
+      className="w-48 sm:w-64 md:w-96 object-contain z-10"
+    />
+  </div>
+</section>
             {/* Pricing Section */}
             <section className="py-12 px-4 bg-white">
                 <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Our Pricing Plans</h2>
@@ -86,14 +98,12 @@ const Home = () => {
   className="bg-blue-900 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition w-full"
   onClick={() => {
     const message = `
-Please fill following details:-
-Desired Duration: 6 months
-Request (newly subscribing/ extension): 
-Purpose: 
-Desired Mode of payment: 
-Email: 
-Desired Username: 
-Desired Password:
+Provide the following information for iMD Account Registeration:
+Name:
+Access Type:
+Email address : 
+Desired username: 
+Desired password:
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
@@ -120,14 +130,12 @@ Desired Password:
   className="bg-blue-900 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition w-full"
   onClick={() => {
     const message = `
-Please fill following details:-
-Desired Duration: 1 year
-Request (newly subscribing/ extension): 
-Purpose: 
-Desired Mode of payment: 
-Email: 
-Desired Username: 
-Desired Password:
+Provide the following information for iMD Account Registeration:
+Name:
+Access Type:
+Email address : 
+Desired username: 
+Desired password:
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
@@ -154,14 +162,12 @@ Desired Password:
   className="bg-blue-900 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition w-full"
   onClick={() => {
     const message = `
-Please fill following details:-
-Desired Duration: 2 years
-Request (newly subscribing/ extension): 
-Purpose: 
-Desired Mode of payment: 
-Email: 
-Desired Username: 
-Desired Password:
+Provide the following information for iMD Account Registeration:
+Name:
+Access Type:
+Email address : 
+Desired username: 
+Desired password:
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
@@ -242,6 +248,7 @@ Desired Password:
                     </li>
                 </ol>
             </section>
+            <Bars />
             <Social />
             <FloatingContact />
         </Layout>

@@ -18,16 +18,22 @@ const Layout = ({ children }) => {
           {showBack && (
             <button
               onClick={() => navigate(-1)}
-              className="mr-4 text-blue-900 text-2xl md:hidden"
+              className="mr-4 text-[#0d3570] text-2xl md:hidden"
               aria-label="Go Back"
             >
               <FaArrowLeft />
             </button>
           )}
-          <div className="text-2xl font-bold text-blue-900">THE USMLE HORIZON</div>
+          {/* Logo */}
+          <img
+            src="https://i.postimg.cc/WzH0bdZs/med2.webp" // <-- Replace with your logo path if needed
+            alt="Logo"
+            className="w-10 h-10 mr-3 rounded-full object-cover"
+          />
+          <div className="text-xl font-bold text-[#0d3570]">THE USMLE HORIZON</div>
         </div>
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-blue-900 font-medium">
+        <ul className="hidden md:flex space-x-6 text-[#0d3570] font-medium">
           <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
           <li><Link to="/pricing" className="hover:text-blue-600">Pricing</Link></li>
           <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>

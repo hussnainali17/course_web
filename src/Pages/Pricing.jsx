@@ -22,14 +22,12 @@ const Pricing = () => (
   className="bg-blue-900 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition w-full"
   onClick={() => {
     const message = `
-Please fill following details:-
-Desired Duration: 6 months
-Request (newly subscribing/ extension): 
-Purpose: 
-Desired Mode of payment: 
-Email: 
-Desired Username: 
-Desired Password:
+Provide the following information for iMD Account Registeration:
+Name:
+Access Type:
+Email address : 
+Desired username: 
+Desired password:
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
@@ -56,14 +54,12 @@ Desired Password:
   className="bg-blue-900 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition w-full"
   onClick={() => {
     const message = `
-Please fill following details:-
-Desired Duration: 1 year
-Request (newly subscribing/ extension): 
-Purpose: 
-Desired Mode of payment: 
-Email: 
-Desired Username: 
-Desired Password:
+Provide the following information for iMD Account Registeration:
+Name:
+Access Type:
+Email address : 
+Desired username: 
+Desired password:
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
@@ -90,14 +86,12 @@ Desired Password:
   className="bg-blue-900 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition w-full"
   onClick={() => {
     const message = `
-Please fill following details:-
-Desired Duration: 2 years
-Request (newly subscribing/ extension): 
-Purpose: 
-Desired Mode of payment: 
-Email: 
-Desired Username: 
-Desired Password:
+Provide the following information for iMD Account Registeration:
+Name:
+Access Type:
+Email address : 
+Desired username: 
+Desired password:
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
