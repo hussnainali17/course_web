@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import Layout from '../components/Layout';
 import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin, FaTelegram } from 'react-icons/fa';
-import { gsap } from 'gsap';
 
 const contacts = [
     {
     name: 'WhatsApp Direct',
     icon: <FaWhatsapp className="text-green-500" />,
-    link: 'https://wa.me/923414517833',
+    link:
+      'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Fcourse-web-f8da.onrender.com',
   },
   {
     name: 'WhatsApp Channel',
@@ -41,13 +41,9 @@ const Contact = () => {
   const iconsRef = useRef([]);
 
   useEffect(() => {
-    const validIcons = iconsRef.current.filter(Boolean);
-    gsap.from(validIcons, {
-      y: 30,
-      stagger: 0.1,
-      duration: 0.7,
-      ease: 'power2.out',
-    });
+    return () => {
+      iconsRef.current = [];
+    };
   }, []);
 
   return (

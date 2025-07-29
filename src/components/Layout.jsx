@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         </button>
         {/* Mobile Menu */}
         {menuOpen && (
-          <ul className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 z-50 md:hidden animate-fade-in">
+          <ul className="absolute top-full left-0 w-full bg-white text-blue-700 shadow-md flex flex-col items-center py-4 z-50 md:hidden animate-fade-in">
             <li className="py-2 w-full text-center">
               <Link to="/" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>Home</Link>
             </li>
