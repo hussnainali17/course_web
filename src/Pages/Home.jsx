@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import { gsap } from 'gsap';
 import Social from '../components/Social';
 import Bars from '../components/Bars';
+import { useNavigate } from 'react-router-dom';
 import FloatingContact from '../components/FloatingContact';
 import { FaBookOpen, FaMobileAlt, FaGlobe, FaBolt, FaUserMd, FaSyncAlt } from 'react-icons/fa';
 
@@ -11,6 +12,10 @@ const Home = () => {
     const paraRef = useRef(null);
     const featuresRef = useRef(null);
     const howItWorksRef = useRef(null);
+    const medImgRef = useRef(null);
+    const logoTextRef = useRef(null);
+    const logoImgRef = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Reset styles before animating
@@ -36,6 +41,32 @@ const Home = () => {
             { y: 50, opacity: 0 },
             { y: 0, opacity: 1, duration: 1, delay: 1.3, ease: 'power3.out' }
         );
+
+        // Animate the main medical professional image
+        if (medImgRef.current) {
+            gsap.fromTo(
+                medImgRef.current,
+                { scale: 0.7, rotate: -15, opacity: 0 },
+                { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.6)", delay: 0.5 }
+            );
+        }
+
+        // Animate the logo text
+        if (logoTextRef.current) {
+            gsap.fromTo(
+                logoTextRef.current,
+                { scale: 0.7, rotate: -15, opacity: 0 },
+                { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.6)", delay: 0.5 }
+            );
+        }
+        // Animate the logo image
+        if (logoImgRef.current) {
+            gsap.fromTo(
+                logoImgRef.current,
+                { scale: 0.7, rotate: -15, opacity: 0 },
+                { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.6)", delay: 0.5 }
+            );
+        }
     }, []);
 
     return (
@@ -45,11 +76,20 @@ const Home = () => {
   {/* Left: Logo and Text */}
   <div className="flex-1 flex flex-col items-center text-center md:items-start md:text-left z-10">
     {/* Logo */}
-    <img
-      src="https://i.postimg.cc/Vkc3Wg5Q/99.webp"
-      alt="iMD Medical Resources Logo"
-      className="w-24 h-24 mb-4 mx-auto md:mx-0"
-    />
+    <div className="flex items-center w-full mb-4">
+      <span
+        ref={logoTextRef}
+        className="text-white text-left font-semibold text-xl mr-3"
+      >
+        IMD <br />Subscription
+      </span>
+      <img
+        ref={logoImgRef}
+        src="https://i.postimg.cc/Vkc3Wg5Q/99.webp"
+        alt="iMD Medical Resources Logo"
+        className="w-24 h-24 md:mx-0"
+      />
+    </div>
     {/* Heading */}
     <h1
       ref={heroRef}
@@ -63,7 +103,7 @@ const Home = () => {
       ref={paraRef}
       className="text-white text-base sm:text-lg md:text-lg text-left mb-6 max-w-xl"
     >
-      The only Biggest Medical Resources' hub on Earth with more than <span className="font-bold">45,000 Medical and Pharmaceutical Resources &amp; Databases</span> now available globally to our valued subscribers.
+       A trusted platform supporting medical students worldwide for over five years—especially those preparing for exams like USMLE, PLAB, AMC, and MCCQE. With 45,000+ medical and pharmaceutical resources, we offer complete guidance through the world’s largest medical resource hub.
     </p>
   </div>
   {/* Right: Image with Shape */}
@@ -72,6 +112,7 @@ const Home = () => {
     <div className="absolute w-60 h-60 sm:w-72 sm:h-72 md:w-[420px] md:h-[420px] bg-[#d6f5e6] rounded-[40%] -z-10 right-0 md:right-8 top-1/2 -translate-y-1/2"></div>
     {/* Main Image */}
     <img
+      ref={medImgRef}
       src="https://i.postimg.cc/sf6YJNNb/med.webp"
       alt="Medical Professional"
       className="w-48 sm:w-64 md:w-96 object-contain z-10"
@@ -189,7 +230,7 @@ Desired password:
                 <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="flex items-start gap-3 bg-white rounded-lg shadow p-4 border border-blue-100">
                         <FaBookOpen className="text-2xl text-yellow-500 mt-1" />
-                        <div>
+                        <div onClick={()=>navigate('/services')}>
                             <span className="font-bold text-blue-900">Unlimited Access</span>
                             <div className="text-blue-800 text-sm">Full library of notes, books, MCQs &amp; more</div>
                         </div>
