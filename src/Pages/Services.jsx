@@ -6,17 +6,17 @@ const services = [
   {
     title: "QBank Access",
     items: [
-      { icon: "📘", text: "UWorld QBank 2025" },
-      { icon: "📗", text: "AMBOSS QBank 2025" },
-      { icon: "📕", text: "CanadaQBank 2025" },
-      { icon: "📙", text: "AceQBank 2025" },
+      { icon: "📘", text: "UWorld QBank" },
+      { icon: "📗", text: "AMBOSS QBank" },
+      { icon: "📕", text: "CanadaQBank" },
+      { icon: "📙", text: "AceQBank" },
       { icon: "🧠", text: "USMLE-Rx QBank" },
       { icon: "📝", text: "NBMEs Self-Assessments" },
       { icon: "📒", text: "BoardVitals QBank" },
       { icon: "📚", text: "BMJ OnExamination QBank" },
       { icon: "🖥", text: "RADPrimer Lessons & QBank" },
-      { icon: "📓", text: "AMEDEX QBank 2025" },
-      { icon: "📖", text: "MPlusX QBank 2025" },
+      { icon: "📓", text: "AMEDEX QBank " },
+      { icon: "📖", text: "MPlusX QBank " },
       { icon: "🔍", text: "PassMedicine QBank" },
       { icon: "❓", text: "PrometricMCQ QBank" },
       { icon: "🎯", text: "TrueLearn QBank" },
@@ -56,6 +56,19 @@ const services = [
     items: [
       { icon: "💼", text: "Lexicomp" },
       { icon: "📈", text: "Micromedex" },
+    ],
+  },
+  {
+    title: "Nursing & Allied Health QBanks",
+    items: [
+      { icon: "🩺", text: "PANCE/PANRE QBank" },
+      { icon: "👩‍⚕️", text: "ANCC Family Nurse Practitioner" },
+      { icon: "🧑‍⚕️", text: "Adult-Gerontology Acute & Primary Care NP" },
+      { icon: "👶", text: "Pediatric Nurse Practitioner (Acute & Primary Care)" },
+      { icon: "🏥", text: "Critical Care Nursing" },
+      { icon: "🧠", text: "Psychiatric-Mental Health Nurse Practitioner" },
+      { icon: "📘", text: "Certified Pediatric Nurse" },
+      { icon: "👩‍🍼", text: "Certified Nurse Midwife" },
     ],
   },
 ];

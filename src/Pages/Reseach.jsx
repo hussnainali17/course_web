@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Layout from "../components/Layout";
 
 const journals = [
@@ -39,6 +39,24 @@ const fadeInKeyframes = `
 `;
 
 const Reseach = () => {
+  const buttonBorderRef = useRef(null);
+
+  useEffect(() => {
+    if (buttonBorderRef.current) {
+      buttonBorderRef.current.animate(
+        [
+          { backgroundPosition: "0% 50%" },
+          { backgroundPosition: "100% 50%" },
+          { backgroundPosition: "0% 50%" },
+        ],
+        {
+          duration: 3500,
+          iterations: Infinity,
+        }
+      );
+    }
+  }, []);
+
   return (
     <Layout>
       <style>{fadeInKeyframes}</style>
@@ -81,6 +99,28 @@ const Reseach = () => {
             ))}
           </ul>
           <div className="mt-10 text-center">
+            {/* Animated Book Your Slot Button */}
+            <div
+              ref={buttonBorderRef}
+              className="mx-auto mb-6 p-[3px] rounded-full w-full max-w-xs sm:max-w-sm md:max-w-md"
+              style={{
+                background:
+                  "linear-gradient(270deg, #0ea5e9, #6366f1, #f472b6, #facc15, #0ea5e9)",
+                backgroundSize: "400% 400%",
+              }}
+            >
+              <a
+                href={`https://wa.me/923414517833?text=${encodeURIComponent(
+                  `Provide the following information for iMD Account Registeration:\n\nName:\nAccess Type:\nEmail address:\nDesired username:\nDesired password:`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full px-8 py-3 rounded-full bg-gradient-to-r from-blue-700 via-cyan-500 to-blue-400 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform animate-fadein text-center"
+                style={{ animationDelay: "0.2s" }}
+              >
+                Book Your Slot
+              </a>
+            </div>
             <div className="text-lg md:text-xl text-blue-800 font-semibold mb-2">
               Our Moto
             </div>

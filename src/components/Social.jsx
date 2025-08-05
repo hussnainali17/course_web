@@ -45,8 +45,10 @@ const contacts = [
 
 const Social = () => (
   <section className="py-10 px-4 text-center">
-    <h2 className="text-2xl font-bold text-blue-800 mb-6">Contact Us</h2>
-    <div className="flex justify-center items-center gap-6 flex-wrap">
+    {/* Top gradient line */}
+    <div className="h-1 w-full max-w-lg mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-700 via-cyan-400 to-blue-700" />
+    <h2 className="text-2xl font-bold text-blue-800 mb-6">Follow us on</h2>
+    <div className="flex justify-center items-center gap-6 sm:gap-4 xs:gap-2 flex-nowrap">
       {contacts.map((c) => (
         <a
           key={c.name}
@@ -61,6 +63,8 @@ const Social = () => (
         </a>
       ))}
     </div>
+    {/* Bottom gradient line */}
+    <div className="h-1 w-full max-w-lg mx-auto mt-6 rounded-full bg-gradient-to-r from-blue-700 via-cyan-400 to-blue-700" />
   </section>
 );
 

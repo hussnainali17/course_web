@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
           )}
           {/* Logo */}
           <img
-            src="https://i.postimg.cc/WzH0bdZs/med2.webp" // <-- Replace with your logo path if needed
+            src="https://i.postimg.cc/mgyFwGWg/Whats-App-Image-2025-08-05-at-12-05-06-ced2140a.png" // <-- Replace with your logo path if needed
             alt="Logo"
             className="w-10 h-10 mr-3 rounded-full object-cover"
           />
@@ -36,8 +36,8 @@ const Layout = ({ children }) => {
         <ul className="hidden md:flex space-x-6 text-[#0d3570] font-medium">
           <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
           <li><Link to="/pricing" className="hover:text-blue-600">Pricing</Link></li>
-          <li><Link to="/services" className="hover:text-blue-600">IDM subscription</Link></li>
-          <li><Link to="/research" className="hover:text-blue-600">Research</Link></li>
+          <li><Link to="/services" className="hover:text-blue-600">iMD subscription</Link></li>
+          <li><Link to="/research" className="hover:text-blue-600">Research Publications</Link></li>
           <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>
           
         </ul>
@@ -59,10 +59,10 @@ const Layout = ({ children }) => {
               <Link to="/pricing" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>Pricing</Link>
             </li>
             <li className="py-2 w-full text-center">
-              <Link to="/services" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>IDM subscription</Link>
+              <Link to="/services" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>iMD subscription</Link>
             </li>
             <li className="py-2 w-full text-center">
-              <Link to="/research" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>Research</Link>
+              <Link to="/research" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>Research Publications</Link>
             </li>
             <li className="py-2 w-full text-center">
               <Link to="/contact" className="hover:text-blue-600 block" onClick={() => setMenuOpen(false)}>Contact</Link>

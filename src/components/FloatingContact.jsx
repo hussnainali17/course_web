@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { MdClose, MdChatBubble } from 'react-icons/md';
 
 const whatsappLink = 'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Fcourse-web-f8da.onrender.com';
-const instagramLink = 'https://www.instagram.com/invites/contact/?igsh=1wvlqx0530vzk&utm_content=nm2cg2n';
+const emailLink = 'mailto:theusmlehorizon@gmail.com';
 
 const FloatingContact = () => {
   const [open, setOpen] = useState(false);
@@ -28,14 +28,12 @@ const FloatingContact = () => {
             <FaWhatsapp className="text-white text-3xl" />
           </a>
           <a
-            href={instagramLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg bg-pink-400 hover:bg-pink-500 transition mb-2"
-            title="Instagram"
+            href={emailLink}
+            className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg bg-yellow-500 hover:bg-yellow-600 transition mb-2"
+            title="Email"
             style={{ transitionDelay: open ? '300ms' : '0ms' }}
           >
-            <FaInstagram className="text-white text-3xl" />
+            <FaEnvelope className="text-white text-3xl" />
           </a>
           <button
             onClick={() => setOpen(false)}

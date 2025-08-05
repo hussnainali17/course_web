@@ -6,6 +6,7 @@ import Bars from '../components/Bars';
 import { useNavigate } from 'react-router-dom';
 import FloatingContact from '../components/FloatingContact';
 import { FaBookOpen, FaMobileAlt, FaGlobe, FaBolt, FaUserMd, FaSyncAlt } from 'react-icons/fa';
+import AnimatedResearchSection from '../components/AnimatedResearchSection';
 
 const Home = () => {
     const heroRef = useRef(null);
@@ -81,7 +82,7 @@ const Home = () => {
         ref={logoTextRef}
         className="text-white text-left font-semibold text-xl mr-3"
       >
-        IMD <br />Subscription
+        iMD <br />Subscription
       </span>
       <img
         ref={logoImgRef}
@@ -103,7 +104,7 @@ const Home = () => {
       ref={paraRef}
       className="text-white text-base sm:text-lg md:text-lg text-left mb-6 max-w-xl"
     >
-       A trusted platform supporting medical students worldwide for over five years—especially those preparing for exams like USMLE, PLAB, AMC, and MCCQE. With 45,000+ medical and pharmaceutical resources, we offer complete guidance through the world’s largest medical resource hub.
+       A trusted platform supporting medical students worldwide since 2015 - especially those preparing for exams like USMLE, PLAB, AMC, and MCCQE. With 45,000+ medical and pharmaceutical resources, we offer unlimited access through the world’s largest medical resource hub.
     </p>
   </div>
   {/* Right: Image with Shape */}
@@ -246,7 +247,7 @@ Desired password:
                         <FaGlobe className="text-2xl text-cyan-500 mt-1" />
                         <div>
                             <span className="font-bold text-blue-900">Global Exam Coverage</span>
-                            <div className="text-blue-800 text-sm">USMLE, PLAB, AMC, MCCQE, MRCP, NEET PG</div>
+                            <div className="text-blue-800 text-sm">USMLE, PLAB, AMC, MCCQE, MRCP, MRCS</div>
                         </div>
                     </div>
                     <div className="flex items-start gap-3 bg-white rounded-lg shadow p-4 border border-blue-100">
@@ -289,8 +290,11 @@ Desired password:
                     </li>
                 </ol>
             </section>
+
             <Bars />
+            <AnimatedResearchSection />
             <Social />
+            <p className='text-center font-bold text-2xl mb-6 text-blue-800'>You can contact us 24/7</p>
             <FloatingContact />
         </Layout>
     );
