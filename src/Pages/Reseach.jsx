@@ -110,8 +110,14 @@ const Reseach = () => {
               }}
             >
               <a
-                href={`https://wa.me/923414517833?text=${encodeURIComponent(
-                  `Provide the following information for iMD Account Registeration:\n\nName:\nAccess Type:\nEmail address:\nDesired username:\nDesired password:`
+                href={`https://wa.me/923414517833?text=${encodeURIComponent(`
+My Introduction is;
+Name:
+Institute:
+YOG:
+Desired Residency:
+Previous Experience:
+`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

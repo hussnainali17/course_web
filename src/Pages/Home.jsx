@@ -122,7 +122,7 @@ const Home = () => {
 </section>
             {/* Pricing Section */}
             <section className="py-12 px-4 bg-white">
-                <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Our Pricing Plans</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Our Subscription Plans</h2>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                     {/* 6-Month Subscription */}
                     <div className="bg-blue-50 border border-blue-200 rounded-xl shadow p-6 w-full max-w-xs text-center hover:shadow-lg transition">

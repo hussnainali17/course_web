@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
           )}
           {/* Logo */}
           <img
-            src="https://i.postimg.cc/mgyFwGWg/Whats-App-Image-2025-08-05-at-12-05-06-ced2140a.png" // <-- Replace with your logo path if needed
+            src="https://i.postimg.cc/d1dtt8BS/99090909.jpg" // <-- Replace with your logo path if needed
             alt="Logo"
             className="w-10 h-10 mr-3 rounded-full object-cover"
           />

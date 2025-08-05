@@ -5,6 +5,7 @@ import {
   FaFacebook,
   FaLinkedin,
   FaTelegram,
+  FaEnvelope, // Add this import
 } from 'react-icons/fa';
 
 const contacts = [
@@ -15,9 +16,9 @@ const contacts = [
       'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Fcourse-web-f8da.onrender.com',
   },
   {
-    name: 'WhatsApp Channel',
-    icon: <FaWhatsapp className="text-blue-500" />,
-    link: 'https://whatsapp.com/channel/0029VacszpdDjiOariYlCI1l',
+    name: 'Gmail',
+    icon: <FaEnvelope className="text-pink-500" />,
+    link: 'mailto:theusmlehorizon@gmail.com',
   },
   {
     name: 'Instagram',
