@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { MdClose, MdChatBubble } from 'react-icons/md';
 
-const whatsappLink = 'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Fcourse-web-f8da.onrender.com';
+const whatsappLink = 'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Ftheusmlehorizon.onrender.com';
 const emailLink = 'mailto:theusmlehorizon@gmail.com';
 
 const FloatingContact = () => {

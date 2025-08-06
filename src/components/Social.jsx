@@ -13,7 +13,7 @@ const contacts = [
     name: 'WhatsApp Direct',
     icon: <FaWhatsapp className="text-green-500" />,
     link:
-      'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Fcourse-web-f8da.onrender.com',
+      'https://wa.me/923414517833?text=Hello!%20I%20have%20a%20question%20please%20help%20me.%20From%20https%3A%2F%2Ftheusmlehorizon.onrender.com',
   },
   {
     name: 'Gmail',
