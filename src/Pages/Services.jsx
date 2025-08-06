@@ -4,6 +4,61 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const services = [
   {
+    title: "Complete Resources For",
+    items: [
+      {
+        icon: (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+            alt="USA Flag"
+            className="w-7 h-5 object-cover rounded shadow"
+          />
+        ),
+        text: "USMLE",
+      },
+      {
+        icon: (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+            alt="UK Flag"
+            className="w-7 h-5 object-cover rounded shadow"
+          />
+        ),
+        text: "PLAB, MRCS, MRCP",
+      },
+      {
+        icon: (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"
+            alt="Australia Flag"
+            className="w-7 h-5 object-cover rounded shadow"
+          />
+        ),
+        text: "AMC",
+      },
+      {
+        icon: (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg"
+            alt="Canada Flag"
+            className="w-7 h-5 object-cover rounded shadow"
+          />
+        ),
+        text: "MCCQE",
+      },
+      {
+        icon: (
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg"
+            alt="UAE Flag"
+            className="w-7 h-5 object-cover rounded shadow"
+          />
+        ),
+        text: "DHA, MOH, HAAD",
+      },
+    ],
+  },
+  {
     title: "QBank Access",
     items: [
       { icon: "📘", text: "UWorld QBank" },
